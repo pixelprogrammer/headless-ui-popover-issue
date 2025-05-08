@@ -22,6 +22,17 @@ function App() {
       <div>
         <p>This succeeds</p>
         <Popover>
+          <PopoverButton as={Button}>
+            <SquareIcon />
+          </PopoverButton>
+          <PopoverPanel className="drop-shadow-2xl border-2 rounded-2xl p-4">
+            <div>hello</div>
+          </PopoverPanel>
+        </Popover>
+      </div>
+      <div>
+        <p>This succeeds</p>
+        <Popover>
           <PopoverButton as={IconButton} icon={<SquareIcon />} />
           <PopoverPanel
             className="drop-shadow-2xl border-2 rounded-2xl p-4"
