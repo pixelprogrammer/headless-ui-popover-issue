@@ -20,3 +20,12 @@ export const IconButtonFailure = ({ icon, ...rest }) => {
     </button>
   );
 };
+
+export const IconButtonWithChild = ({ icon, children, ...rest }) => {
+  const Icon = () => icon;
+  return (
+    <button {...rest} className={buttonStyles}>
+      {children ? children : <Icon />}
+    </button>
+  );
+};

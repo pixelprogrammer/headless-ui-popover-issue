@@ -1,5 +1,10 @@
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { Button, IconButton, IconButtonFailure } from "./components/button";
+import {
+  Button,
+  IconButton,
+  IconButtonFailure,
+  IconButtonWithChild,
+} from "./components/button";
 import { SquareIcon } from "./components/icon";
 
 function App() {
@@ -46,6 +51,20 @@ function App() {
         <p>This fails</p>
         <Popover>
           <PopoverButton as={IconButtonFailure} icon={<SquareIcon />} />
+          <PopoverPanel
+            className="drop-shadow-2xl border-2 rounded-2xl p-4"
+            anchor="bottom start"
+          >
+            <div>hello</div>
+          </PopoverPanel>
+        </Popover>
+      </div>
+      <div>
+        <p>?????</p>
+        <Popover>
+          <PopoverButton as={IconButtonWithChild}>
+            <SquareIcon />
+          </PopoverButton>
           <PopoverPanel
             className="drop-shadow-2xl border-2 rounded-2xl p-4"
             anchor="bottom start"
