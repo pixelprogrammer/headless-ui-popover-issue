@@ -60,7 +60,7 @@ function App() {
         </Popover>
       </div>
       <div>
-        <p>?????</p>
+        <p>Succeeds if child is option value</p>
         <Popover>
           <PopoverButton as={IconButtonWithChild}>
             <SquareIcon />
